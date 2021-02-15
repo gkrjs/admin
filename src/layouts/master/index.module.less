@@ -1,0 +1,35 @@
+@prefix-cls: ~"basic-layout";
+.@{prefix-cls} {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  flex-direction: column;
+  > .@{prefix-cls}-sidebar {
+    z-index: 999;
+  }
+
+  > .ant-layout {
+    min-height: 100%;
+  }
+
+  &-main {
+    margin-left: 1px;
+    > .@{prefix-cls}-header {
+      background: #fff;
+    }
+  }
+  &-header {
+    display: flex;
+    padding: 0;
+    margin-left: -1px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  &-content {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+}
